@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% load static %}
+
+<section style="padding: 4% 0">
+  <div class="gint center">
+    <div class="contact center">
+      <div class="contact-heading">
+        <h1>Get In Touch</h1>
+        <p>Conten to be added related to contact</p>
+      </div>
+      <div class="contact-form">
+        <form>
+          <label for="Name">Enter Your Name </label>
+          <input type="text" id="Name" />
+          <label for="Number">Enter Your Number </label>
+          <input type="text" id="Number" />
+          <label for="Email">Enter Your Email </label>
+          <input type="text" id="Email" />
+          <textarea></textarea>
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.437820720229!2d80.22065527579635!3d13.071415612680628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52668504d9bbc9%3A0xb953c83dcd2d138a!2sChateau%20D%20Ampa%2C%20Indian%20Statistical%20Institute%2C%20Nelson%20Manickam%20Rd%2C%20Rajaram%20Mehta%20Nagar%2C%20Aminjikarai%2C%20Chennai%2C%20Tamil%20Nadu%20600029!5e0!3m2!1sen!2sin!4v1722409871514!5m2!1sen!2sin"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="side-by-side">
+        <!--<img src="{% static 'mall.png' %}" alt="" />-->
+        <p>
+          Chateau D Ampa Indian Statistical Institute, Nelson Manickam Rd,
+          Rajaram Mehta Nagar, Aminjikarai, Chennai, Tamil Nadu 600029
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

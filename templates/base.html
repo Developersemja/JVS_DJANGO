@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>JVS TRADERS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <h1>Heading</h1>
+        <ul>
+          <li class="BTN01"><a href="{% url 'index' %}">Home</a></li>
+          <li class="BTN01"><a href="{% url 'category' %}">Category</a></li>
+          <li class="BTN01"><a href="{% url 'products' %}">Products</a></li>
+          <li class="BTN01"><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="center footer">
+          <div class="side-footer">
+            <h1>JVS Traders</h1>
+          </div>
+          <div class="r-sider-footer center">
+            <div class="pages">
+              <ul>
+                <li><h1>Pages</h1></li>
+                <a href="{% url 'index' %}"><li class="BTN01">Home</li></a>
+                <a href="{% url 'category' %}"><li class="BTN01">Category</li></a>
+                <a href="{% url 'products' %}"><li class="BTN01">Products</li></a>
+                <a href="{% url 'contact' %}"><li class="BTN01">Contact</li></a>
+              </ul>
+            </div>
+            <div class="Social-media">
+              <ul>
+                <li><h1>Social Media</h1></li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Youtube</li>
+              </ul>
+            </div>
+            <div class="Social-media">
+              <ul>
+                <li><h1>Contact Details</h1></li>
+                <li>+91 99999 99999</li>
+                <li>Email</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      {% block extra_scripts %}
+      {% endblock %}
+      
+    </body>
+  </html>

@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% load static %}
+    <section>
+      <div class="Category center">
+        <h1>Category</h1>
+        <div class="category-list">
+        {% for category in category %}
+            <a href="{% url 'category_list' category.cid %}">
+              <div class="listing center">
+              <img src="{{ category.image.url }}" alt="" />
+              <h2>{{ category.name }}</h2>
+              <p>{{category.products.count}} Product{{category.products.count | pluralize }}</p>
+              </div>
+            </a>
+        {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="marquee">
+        <span> OFFERS TO BE DISPLAYED HERE WILL BE UPDATED FROM BACKEND </span>
+      </div>
+    </section>
+
+{% endblock %}
