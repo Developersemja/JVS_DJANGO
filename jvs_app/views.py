@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from jvs_app.models import Category,Product,Offer
 
+
+#---------------------------- Home Page ----------------------------------------------------#
+
 def index(request):
     Products=Product.objects.all()
     Categories= Category .objects.all()
@@ -18,6 +21,7 @@ def index(request):
     }
     return render(request, 'index.html',context)
 
+#---------------------------- Category Listing Page ---------------------------------------#
 
 def category(request):
     Categories= Category .objects.all()
@@ -28,6 +32,9 @@ def category(request):
     return render(request, 'category.html',context)
 
 
+
+#---------------------------- Category Prouct Listing Page -------------------------------#
+
 def category_list(request,cid):
     category = Category.objects.get(cid=cid)
     products= Product.objects.filter(category=category)
@@ -37,9 +44,14 @@ def category_list(request,cid):
     return render(request,"category_list.html",context)
 
 
+#---------------------------- Contact Page ----------------------------------------------#
+
 def contact(request):
     return render(request, 'contact.html')
 
+
+
+#---------------------------- Products Listing Page ------------------------------------#
 
 def products(request):
     Products=Product.objects.all()
@@ -48,8 +60,12 @@ def products(request):
         'products':Products, 'offer': offers,
     }
     return render(request, 'products.html',context)
+
+
  
- 
+
+#---------------------------- Product Details Page -------------------------------------#
+
 def product_details(request,pid):
     Products=Product.objects.get(pid=pid)
     features = Products.feature.split(',')
