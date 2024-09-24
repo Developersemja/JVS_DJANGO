@@ -38,8 +38,9 @@ def category(request):
 def category_list(request,cid):
     category = Category.objects.get(cid=cid)
     products= Product.objects.filter(category=category)
+    offers=Offer.objects.all()
     context={
-        "Category":category,"product":products,
+        "Category":category,"product":products,'offer': offers,
     }
     return render(request,"category_list.html",context)
 
@@ -74,5 +75,4 @@ def product_details(request,pid):
     context={
         'p':Products, 'p_images':p_image,'feature':features,
     }
-    print(context)
     return render(request, 'product_detail_page.html',context)   

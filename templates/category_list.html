@@ -6,7 +6,7 @@
         <h1>{{Category.name}}</h1>
         <div class="category-list">
         {% for product in product %}
-          <a href="{% url 'category_list' product.pid %}">
+          <a href="{% url 'product_details' product.pid %}">
             <div class="listing center">
               <img src="{{ product.image.url }}" alt="{{ product.name }}" />
               <h2>{{ product.name }}</h2>
@@ -20,7 +20,9 @@
 
     <section>
       <div class="marquee">
-        <span> OFFERS TO BE DISPLAYED HERE WILL BE UPDATED FROM BACKEND </span>
+        {% for offer in offer %}
+          <span>{{ offer.marquee }}</span>
+        {% endfor %}
       </div>
     </section>
 

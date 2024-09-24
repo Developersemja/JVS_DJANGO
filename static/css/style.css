@@ -179,6 +179,7 @@ a {
 
 .listing img {
   height: 40vh;
+  width: 40vh;
 }
 /*----------------------------------Offer Image-----------------------------------------*/
 
@@ -378,6 +379,7 @@ body {
 .details li {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 15px;
   background-color: gainsboro;
   border-radius: 15px;

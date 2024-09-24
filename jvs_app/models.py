@@ -9,11 +9,6 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='category_images/')
 
-    def save(self, *args, **kwargs):
-        if not self.cid:  
-            self.cid = ShortUUIDField(length=6, max_length=30, prefix="CAT-", alphabet="0123456789").generate()
-        super().save(*args, **kwargs)
-
     def __str__(self):
         return self.name
 
@@ -28,11 +23,6 @@ class Product(models.Model):
     feature = models.CharField(max_length=255)
     image = models.ImageField(upload_to='Product_image/')
     date = models.DateTimeField(auto_now_add=True)
-
-    def save(self, *args, **kwargs):
-        if not self.pid:  
-            self.pid = ShortUUIDField(length=6, max_length=30, prefix="PRD-", alphabet="0123456789").generate()
-        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name

@@ -20,7 +20,9 @@
 
     <section>
       <div class="marquee">
-        <span> OFFERS TO BE DISPLAYED HERE WILL BE UPDATED FROM BACKEND </span>
+        {% for offer in offer %}
+          <span>{{ offer.marquee }}</span>
+        {% endfor %}
       </div>
     </section>
 
