@@ -635,6 +635,10 @@ body {
     flex-direction: column;
     align-items: center;
 }
+  .listing img{
+    height: 23vh;
+    width: 23vh;
+  }
 }
 
 /*---------------------------------- laptop View -----------------------------------------*/
@@ -651,6 +655,7 @@ body {
   }
   .category-list {
     gap: 8vh 13vh;
+    grid-template-columns: repeat(3, 1fr);
   }
   .listing img {
     height: 35vh;
@@ -686,7 +691,7 @@ body {
 
 @media screen and (min-width: 1400px) and (max-width: 1500px) {
   .category-list {
-    gap: 8vh 25vh;
+    gap: 8vh 12vh;
   }
 }
 
