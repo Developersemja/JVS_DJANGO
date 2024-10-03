@@ -383,6 +383,7 @@ body {
   padding: 15px;
   background-color: gainsboro;
   border-radius: 15px;
+  font-size: 14px;
 }
 
 /*---------------------------------- Mobile View -----------------------------------------*/
@@ -392,7 +393,7 @@ body {
     font-size: 6vh;
   }
   .content img {
-    height: 35vh;
+    height: 20vh;
   }
   .menu ul {
     gap: 10px;
@@ -426,7 +427,8 @@ body {
     gap: 3vh 6vh;
   }
   .listing img {
-    height: 25vh;
+    height: 18vh;
+    width: 18vh;
   }
   .offer-image img {
     height: 25vh;
@@ -671,6 +673,7 @@ body {
   }
   .details li {
     margin-bottom: 10px;
+    font-size: 12px;
   }
   .footer {
     gap: 100px;
